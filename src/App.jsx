@@ -8,7 +8,7 @@ const App= () => {
         <NavBarBootstrap/>
       </nav>
       <body>
-        <ItemListContainer/>
+        <ItemListContainer nombre={"Hola soy un props"} edad={30} otraInfo={"strings"}/>
       </body>
     </>
   )
