@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget';
 
-function NavBarBootstrap() {
+function NavBarBootstrap(carritoContador) {
 return (
     <Navbar bg="dark" variant='dark' expand="lg">
         <Container>

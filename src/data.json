@@ -1,0 +1,42 @@
+[
+    {
+    "id":"1",
+    "nombre":"Azucar",
+    "descripcion":"azucar de 1ra calidad",
+    "img":"https://www.cucinare.tv/wp-content/uploads/2019/09/Az%C3%BAcar.jpg",
+    "tipo":"Almacen",
+    "precio": 400,
+    "stock": 50
+    }
+,
+    {
+    "id":"2",
+    "nombre":"Yerba",
+    "descripcion":"la mejor yerba mas sabor menos polvo",
+    "Img": "https://d2r9epyceweg5n.cloudfront.net/stores/002/293/236/products/yerba-mate-verdeada-premium1-4c8b9ab1b1832bb80216642894119857-1024-1024.jpg",
+    "tipo":"Almacen",
+    "precio": 500,
+    "stock":30
+    }
+,
+    {
+    "id":"3",
+    "nombre":"Tornillos",
+    "descripcion":"bolsa de tornillos de gran calidad",
+    "img":"https://bercovichsa.vteximg.com.br/arquivos/ids/162388-3000-3000/tornillos-t2-punta-aguja-durlock-100-unidades-principal.jpg?v=637994476694200000",
+    "tipo":"Ferreteria",
+    "precio":60,
+    "stock":600
+    }
+,
+    {
+    "id":"4",
+    "nombre":"Campera de cuero",
+    "descripcion":"Hermosa campera de cuero natural",
+    "Img":"https://http2.mlstatic.com/D_NQ_NP_621680-MLA31046506528_062019-O.webp",
+    "tipo":"Ropá",  
+    "precio":15000,
+    "stock":10
+    }
+
+]
