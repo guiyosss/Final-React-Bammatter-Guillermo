@@ -1,9 +1,16 @@
 import React from 'react'
 import ItemList from './ItemList';
+import data from "../data.json"
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import Item from './Item';
 
 
 const ItemListContainer = (props) => {
 
+
+  ///obtencion de datos mediante archivo json (data.json)
   const getDatos =() => {
     return new Promise((resolve, reject) => {
         if(data.length === 0){
@@ -15,27 +22,45 @@ const ItemListContainer = (props) => {
     })
   }   
 
-///getDatos().then((data)=>console.log(data))
+    ///getDatos().then((data)=>console.log(data)) prueba
 
   async function fetchingData() {
       try {
           const datosFetched = await getDatos()
           console.log(datosFetched); 
-      } catch (err) {
-          console.log(err);
+      } catch (error) {
+          console.log(error);
       }
   }
-
   fetchingData();
+
   
   console.log(props);
+
+///*Filtro por categoria
+const {category} = useParams();
+
+const catFilter = data.filter((prod) => prod.tipo === category )
+
+
+
   return (
     <>
 
     <div>Bienvenido</div>
-    <h2>{props.nombre}</h2>
+    <Link to="/ItemDetailContainer">
+      <button>
+        ir a ItemDetailContainer
+      </button>
+    </Link>
+ 
     <p>{props.otraInfo}</p>
-    <div><ItemList/></div>
+{/*     <div>
+      <ItemList data={data}/> ///para mostrar las listas sin categoria
+    </div> */}
+    <div>
+      {category ? <ItemList data={catFilter}/>:<ItemList data={data} />}
+    </div> 
     </>
     
   )
