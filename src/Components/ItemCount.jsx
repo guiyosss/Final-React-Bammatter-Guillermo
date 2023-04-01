@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"; /// prueba esta conformado por 2 pa
 
 const ItemCount = () => {
     const [itemContador , setContadorItem] = useState(0) ///contador de carrito
+    
 
     const sumarItem = () => {
     if (itemContador > 10 ) {///stock definido  

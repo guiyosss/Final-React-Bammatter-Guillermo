@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList';
 import data from "../data.json"
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import Item from './Item';
+
 
 
 const ItemListContainer = (props) => {
@@ -34,8 +35,16 @@ const ItemListContainer = (props) => {
   }
   fetchingData();
 
-  
+
   console.log(props);
+
+  /// useeffect no aplicado
+const [prod,setProd] =useState([])
+  console.log();
+useEffect(()=>{
+  getDatos().then((prod) => setProd(prod));
+}, []);
+
 
 ///*Filtro por categoria
 const {category} = useParams();

@@ -15,6 +15,7 @@ import Item from "./Components/Item";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import ItemDetail from "./Components/ItemDetail";
 import Cart from "./Components/cart";
+import Login from "./Components/Login";
 
 const App= () => {
   const Holamundo = () => 
@@ -29,15 +30,15 @@ const App= () => {
   return ( 
     
       <BrowserRouter>
-          <NavBarBootstrap/>
+        <NavBarBootstrap/>
 
 
         <Routes>
             <Route exact path="/" element= {<ItemListContainer/>}/>
-            <Route exact path="/ItemDetailContainer" element={<ItemDetailContainer/>}/>
-            <Route exact path="/ItemDetail/:id" element= {<ItemDetail/>}/>
+            <Route exact path="/ItemDetail/:id" element= {<ItemDetailContainer/>}/>
             <Route exact path="/category/:category" element={<ItemListContainer/>}/>
             <Route exact path="/cart/" element={<Cart/>}/>
+            <Route exact path="/login/" element={<Login/>}/>
 
 
         </Routes>

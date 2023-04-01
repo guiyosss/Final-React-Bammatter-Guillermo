@@ -13,7 +13,7 @@ return (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link href="#Login">Login</Nav.Link>
+                <Nav.Link as={Link} to={`/Login`}>Login</Nav.Link>
                 <NavDropdown title="Categorias" id="basic-nav-dropdown">
                     {/* como hay problemas con el link de react router dom al dropdown se debe agregar etiqueta
                     AS={Link} seguido de to={"laruta"} */}
